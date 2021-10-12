@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1yk-Wa-k1D">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favourites-->
+        <scene sceneID="dVB-UU-3dt">
+            <objects>
+                <viewController id="Xx4-JV-cF1" customClass="FavouritesViewController" customModule="Groggery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zjg-0B-OYc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f1y-e8-8Bp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" name="Primer"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UG0-E6-phZ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="16"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="testCollectionViewCell" id="hXc-iZ-Ek7">
+                                        <rect key="frame" x="0.0" y="16" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="S3l-ND-t3D">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="favouritesCollectionViewSectionHeader" id="qh3-lM-PUg" customClass="FavouritesCollectionViewSectionHeader" customModule="Groggery" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEj-aK-wiQ">
+                                            <rect key="frame" x="20" y="1" width="31" height="14"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" name="TextSecondary"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WEj-aK-wiQ" firstAttribute="centerY" secondItem="qh3-lM-PUg" secondAttribute="centerY" id="Ct6-RG-yTd"/>
+                                        <constraint firstItem="WEj-aK-wiQ" firstAttribute="leading" secondItem="qh3-lM-PUg" secondAttribute="leading" constant="20" id="FPZ-aD-kqL"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="sectionHeaderLabel" destination="WEj-aK-wiQ" id="CMa-cG-wPQ"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KNb-ac-sS6"/>
+                        <color key="backgroundColor" name="Primer"/>
+                        <constraints>
+                            <constraint firstItem="KNb-ac-sS6" firstAttribute="bottom" secondItem="f1y-e8-8Bp" secondAttribute="bottom" id="C5i-Al-QZg"/>
+                            <constraint firstItem="KNb-ac-sS6" firstAttribute="trailing" secondItem="f1y-e8-8Bp" secondAttribute="trailing" id="PMF-Pw-xBU"/>
+                            <constraint firstItem="f1y-e8-8Bp" firstAttribute="leading" secondItem="KNb-ac-sS6" secondAttribute="leading" id="q7H-C3-1qt"/>
+                            <constraint firstItem="f1y-e8-8Bp" firstAttribute="top" secondItem="Zjg-0B-OYc" secondAttribute="top" id="yor-mB-V03"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favourites" image="star" catalog="system" id="lng-lb-adJ"/>
+                    <navigationItem key="navigationItem" id="DxI-gg-jiz"/>
+                    <connections>
+                        <outlet property="favouritesCollectionView" destination="f1y-e8-8Bp" id="Zz3-p0-jGh"/>
+                        <segue destination="3ZK-Tm-shW" kind="show" identifier="FavouritesSegueToCocktailDetails" id="xJV-b5-5hS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwm-Kd-wLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-481" y="1519"/>
+        </scene>
+        <!--CocktailDetails-->
+        <scene sceneID="sNc-1C-RRf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CocktailDetails" id="3ZK-Tm-shW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NmI-o8-h7J"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k23-V8-nqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="1519"/>
+        </scene>
+        <!--StyledUI Navigation Controller-->
+        <scene sceneID="ZB0-Ys-kJJ">
+            <objects>
+                <navigationController id="1yk-Wa-k1D" customClass="StyledUINavigationController" customModule="Groggery" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vtQ-p6-LC0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="AccentPink"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="TextStandard"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="TextStandard"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Xx4-JV-cF1" kind="relationship" relationship="rootViewController" id="IPF-RG-koS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VeS-Ng-mvt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1401" y="1519"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <namedColor name="AccentPink">
+            <color red="1" green="0.48627450980392156" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primer">
+            <color red="0.18431372549019609" green="0.20784313725490197" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextSecondary">
+            <color red="0.8901960784313725" green="0.89411764705882357" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextStandard">
+            <color red="0.99607843137254903" green="1" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
