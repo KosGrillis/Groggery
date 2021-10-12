@@ -5,7 +5,7 @@ import Foundation
 /// Encapsulates API config, acting as a facade to the API implementation.
 /// Usage example: API.urlFor(route: API.urlRoutes.list, params: [...])
 struct API {
-    static let key = "9973533"
+    static let key = "YOUR_API_KEY_HERE"
     static let baseUrl = "https://www.thecocktaildb.com/api/json/v2"
     
     enum urlRoutes: String {
